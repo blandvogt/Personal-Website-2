@@ -1,0 +1,20 @@
+.textBody {
+    padding-bottom: 1rem;
+    text-align: left;
+}
+
+.imgLeft {
+    width: 35%;
+    margin-right: 2%; 
+    margin-bottom: 0.2rem; 
+    float: left;
+    border: 1px black solid;
+}
+
+.imgRight {
+    width: 35%;
+    margin-left: 2%;
+    margin-bottom: 0.2rem; 
+    float: right;
+    border: 1px black solid;
+}

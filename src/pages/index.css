@@ -1,0 +1,125 @@
+.imgBrian {
+    border-radius: 100%;
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: 2%;
+    float: right;
+    border: 1px solid black;
+    box-shadow: 3px 3px 2px #474747;
+}
+
+.oculusBG {
+    background: url("../images/backgrounds/oculus.jpg") center;
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.mountainBG {
+    background: url("../images/backgrounds/mountain1.jpg") center;
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.titleName {
+    font-size: 90px;
+    margin-bottom: 0px;
+}
+
+.titleRole {
+    font-size: 40px;
+    color: #3090b0;
+}
+
+.container {
+    margin-top: 4%;
+    padding-left: 0%;
+    padding-right: 35%;
+}
+
+.bodyText {
+    padding-right: 0%;
+    width: 100%;
+}
+
+.grid {
+    padding-left: 2%;
+}
+
+@media only screen and (min-width: 2560px) {
+
+    .titleName {
+        font-size: 9rem;
+    }
+
+    .titleRole {
+        font-size: 4rem;
+        text-align: left;
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+
+    .bodyText {
+        font-size: 3rem;
+    }
+}
+
+/* Screen 1130px and smaller */
+@media only screen and (max-width: 1130px) {
+    .imgBrian {
+        width: 50%;
+    }
+
+    .titleName {
+        font-size: 80px;
+    }
+
+    .container {
+        padding-right: 10%;
+        margin-bottom: 100%;
+    }
+}
+
+/* Screen 959px and smaller */
+@media only screen and (max-width: 959px) {
+    .imgBrian {
+        width: 28%;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+
+    .titleName {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .titleRole {
+        font-size: 30px;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+
+    .container {
+        padding-right: 20%;
+        padding-left: 20%;
+        margin-bottom: 100px;
+        text-align: center;
+    }
+
+    .grid {
+        padding-left: 0%;
+    }
+}

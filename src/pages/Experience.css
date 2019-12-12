@@ -1,0 +1,11 @@
+.cityImg {
+    background-size: cover;
+    height: 100%
+}
+
+@media only screen and (max-width: 959px) {
+    .cityImg {
+        height: 15rem;
+    }
+
+}

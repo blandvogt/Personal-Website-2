@@ -1,0 +1,9 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.title {
+    flex-grow: 1;
+    text-align: 'center';
+}
