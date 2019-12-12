@@ -57,21 +57,21 @@ export const query = graphql`
       WiMove: file(relativePath: {eq: "projects/WiMove.png"}) {
         childImageSharp {
             fluid(maxWidth: 50000, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
         }
       }
       OldWebsite: file(relativePath: {eq: "projects/OldWebsite.png"}) {
         childImageSharp {
             fluid(maxWidth: 50000, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
         }
       }
       DataScienceTeam: file(relativePath: {eq: "projects/DataScienceTeam.png"}) {
         childImageSharp {
             fluid(maxWidth: 50000, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
         }
       }

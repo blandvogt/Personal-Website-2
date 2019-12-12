@@ -51,7 +51,7 @@ const Website = () => {
   }, {
     image: chart,
     title: 'Stunning Charts',
-    body: `Each chart on the Skills page is built using the React-ChartJS-2 library, a wrapper of Chart.js. 
+    body: `Each chart on the Skills page was built using the React-ChartJS-2 library, a wrapper of Chart.js. 
           While the data needed for this site isn't all that complex, React Charts allows me to easily 
           create beautifully designed charts that both look and feel dynamic.`,
     link: 'https://github.com/jerairrest/react-chartjs-2'
