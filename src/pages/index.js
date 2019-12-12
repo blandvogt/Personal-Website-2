@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import SEO from "../components/seo";
-import { Grid, Typography, SwipeableDrawer, IconButton, makeStyles, Link, Button } from '@material-ui/core';
+import { Grid, Typography, SwipeableDrawer, IconButton, Link, Button } from '@material-ui/core';
 import EmojiObjectsOutlinedIcon from '@material-ui/icons/EmojiObjectsOutlined';
 import './index.css';
 import DrawItems from '../components/DrawerItems';
@@ -12,13 +12,12 @@ import { GlobalState, GlobalDispatch } from '../Context/GlobalContext';
 const IndexPage = ({ data }) => {
   const [drawer, setDrawer] = useState(false);
   const toggleDrawer = () => setDrawer(!drawer);
-  const { menuButton, darkModeBtn } = useStyles();
   const darkMode = useContext(GlobalState).darkMode;
 
   return (
     <div className={darkMode ? 'mountainBG' : 'oculusBG'}>
       <SEO title="Home" />
-      <IconButton className={menuButton} edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer}>
+      <IconButton style={{margin: '1rem'}} edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer}>
         <MenuIcon fontSize='large' style={darkMode ? {color: 'white'} : {color: 'black'}}/>
       </IconButton>
 
@@ -26,8 +25,9 @@ const IndexPage = ({ data }) => {
         <div style={darkMode ? { height: '100%', backgroundColor: '#1f1e1e', color: 'white' } : {}}><DrawItems /></div>
       </SwipeableDrawer>
 
-      <Button className={darkModeBtn} onClick={useContext(GlobalDispatch)}
-        style={darkMode ? { color: 'white' } : { color: 'black' }}>
+      <Button onClick={useContext(GlobalDispatch)}
+        style={darkMode ? {color: 'white', float: 'right', marginTop: '1.5rem', marginRight: '1rem'} : 
+        {color: 'black', float: 'right', marginTop: '1.5rem', marginRight: '1rem'}}>
         <EmojiObjectsOutlinedIcon />
       </Button>
 
@@ -61,19 +61,6 @@ const IndexPage = ({ data }) => {
     </div>
   );
 }
-
-const useStyles = makeStyles(theme => ({
-  menuButton: {
-    margin: theme.spacing(2),
-    marginLeft: '30px'
-  },
-  darkModeBtn: {
-    margin: theme.spacing(2),
-    float: 'right',
-    marginRight: '30px',
-    marginTop: '1.5rem'
-  }
-}));
 
 export default IndexPage;
 export const query = graphql`
