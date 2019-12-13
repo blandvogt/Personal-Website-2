@@ -5,11 +5,9 @@ import { GlobalState } from "../Context/GlobalContext";
 
 const CardGrid = props => {
     const darkMode = useContext(GlobalState).darkMode;
-
     const cards = props.items.map((item, i) => (
         <Grid item xs={12} sm={6} md={4} key={i}>
             <Card style={darkMode ? { backgroundColor: '#4d4d4d', color: 'white' } : {}}>
-                {/*<CardMedia style={{ height: '140px' }} image={item.image}/>*/}
                 <Img style={{ height: '140px' }} fluid={item.image}/>
                 <CardContent>
                     <Typography variant={'body1'} gutterBottom><strong>{item.title}</strong></Typography>
@@ -20,7 +18,7 @@ const CardGrid = props => {
                 </CardContent>
             </Card>
         </Grid>
-    ))
+    ));
 
     return (
         <Grid container spacing={3}>
