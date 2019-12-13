@@ -8,6 +8,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { graphql } from "gatsby";
 import Img from 'gatsby-image';
 import { GlobalState, GlobalDispatch } from '../Context/GlobalContext';
+import oculus from '../images/backgrounds/oculus.jpg';
+import mountain1 from '../images/backgrounds/mountain1.jpg';
 
 const IndexPage = ({ data }) => {
   const [drawer, setDrawer] = useState(false);
@@ -15,7 +17,25 @@ const IndexPage = ({ data }) => {
   const darkMode = useContext(GlobalState).darkMode;
 
   return (
-    <div className={darkMode ? 'mountainBG' : 'oculusBG'}>
+    <div style={darkMode ? {backgroundImage: `url(${mountain1})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    minHeight: '100%',
+    width: '100%',
+    height: 'auto',
+    position: 'fixed',
+    top: '0',
+    left: '0'} : 
+    {backgroundImage: `url(${oculus})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    minHeight: '100%',
+    width: '100%',
+    height: 'auto',
+    position: 'fixed',
+    top: '0',
+    left: '0'}}>
+
       <SEO title="Home" />
       <IconButton style={{margin: '1rem'}} edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer}>
         <MenuIcon fontSize='large' style={darkMode ? {color: 'white'} : {color: 'black'}}/>
@@ -33,7 +53,7 @@ const IndexPage = ({ data }) => {
 
       <Grid container spacing={0} style={{ marginTop: '5%' }}>
         <Grid item md={5} sm={12} xs={12}>
-          <Img durationFadeIn={1500} className='imgBrian' fluid={data.Brian.childImageSharp.fluid} />
+          <Img className='imgBrian' fluid={data.Brian.childImageSharp.fluid} />
         </Grid>
         <Grid item md={7} sm={12} className='grid'>
           <h1 className='titleName'><strong>BRIAN</strong></h1>
