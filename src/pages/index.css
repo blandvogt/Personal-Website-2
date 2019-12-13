@@ -9,28 +9,6 @@
     box-shadow: 3px 3px 2px #474747;
 }
 
-.oculusBG {
-    background: url("../images/backgrounds/oculus.jpg") center;
-    background-size: cover;
-    min-height: 100%;
-    width: 100%;
-    height: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-.mountainBG {
-    background: url("../images/backgrounds/mountain1.jpg") center;
-    background-size: cover;
-    min-height: 100%;
-    width: 100%;
-    height: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
 .titleName {
     font-size: 90px;
     margin-bottom: 0px;

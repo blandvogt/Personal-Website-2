@@ -33,7 +33,7 @@ const Website = ({ data }) => {
     image: data.superImage.childImageSharp.fluid,
     title: 'Super Images',
     body: `Gatsby-Image is one of the many great plugins built for Gatsby and is 
-          used to manage this site's media content. It uses GrpahQL to lazy-loaded asynchronous WebP images.
+          used to manage this site's media content. It uses GrpahQL to lazy-load asynchronous WebP images.
           It even creates a low quality SVG on initial load to simulate the feel of an instant render.`,
     link: 'https://www.gatsbyjs.org/packages/gatsby-image/'
   }, {

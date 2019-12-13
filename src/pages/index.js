@@ -8,8 +8,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { graphql } from "gatsby";
 import Img from 'gatsby-image';
 import { GlobalState, GlobalDispatch } from '../Context/GlobalContext';
-import oculus from '../images/backgrounds/oculus.jpg';
-import mountain1 from '../images/backgrounds/mountain1.jpg';
 
 const IndexPage = ({ data }) => {
   const [drawer, setDrawer] = useState(false);
@@ -17,25 +15,14 @@ const IndexPage = ({ data }) => {
   const darkMode = useContext(GlobalState).darkMode;
 
   return (
-    <div style={darkMode ? {backgroundImage: `url(${mountain1})`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    minHeight: '100%',
-    width: '100%',
-    height: 'auto',
-    position: 'fixed',
-    top: '0',
-    left: '0'} : 
-    {backgroundImage: `url(${oculus})`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    minHeight: '100%',
-    width: '100%',
-    height: 'auto',
-    position: 'fixed',
-    top: '0',
-    left: '0'}}>
-
+    <div>
+      { darkMode ? 
+        <Img fluid={data.mountain.childImageSharp.fluid} style={{minHeight: '100%', minWidth: '1024px', width: '100%', 
+        height: 'auto', position: 'fixed', top: '0', left: '0', zIndex: '-3'}}/> 
+        :
+        <Img fluid={data.oculus.childImageSharp.fluid} style={{minHeight: '100%', minWidth: '1024px', width: '100%', 
+        height: 'auto', position: 'fixed', top: '0', left: '0', zIndex: '-3'}}/>
+      }
       <SEO title="Home" />
       <IconButton style={{margin: '1rem'}} edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer}>
         <MenuIcon fontSize='large' style={darkMode ? {color: 'white'} : {color: 'black'}}/>
@@ -88,6 +75,20 @@ export const query = graphql`
     Brian: file(relativePath: {eq: "brian.jpg"}) {
       childImageSharp {
         fluid(maxWidth: 700) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+    oculus: file(relativePath: {eq: "backgrounds/oculus.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 50000, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+    mountain: file(relativePath: {eq: "backgrounds/mountain1.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 50000, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }

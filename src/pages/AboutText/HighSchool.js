@@ -11,13 +11,13 @@ const HighSchool = () => (
         Honor Society (NHS). 
     </Typography>
     <Typography className='textBody' variant="body2">
-        In my senior year I volunteered to run an after-school tutoring program 
+        In my Senior year I volunteered to run an after-school tutoring program 
         for the NHS. By year end, I expanded the program from a single elementary 
         school, to 8 schools around the borough. I was presented a Community Service award for this 
         undertaking, accompanied by a small scholarship at graduation.
     </Typography>
     <Typography className='textBody' variant="body2">
-        Like most students at the start of senior year, I had no idea what I wanted to pursue 
+        Like most students at the start of Senior year, I had no idea what I wanted to pursue 
         as a career. On a whim, I decided to take a Computer Science elective in C++. By the end of the 
         first class, I remember grinning at the words, "Hello World!", on my screen and 
         knowing that I had found my passion.

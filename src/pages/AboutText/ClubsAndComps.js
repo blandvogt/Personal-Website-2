@@ -12,7 +12,7 @@ const ClubsAndComps = () => (
         The following year, my concept for a used-textbook marketplace app won 3rd place 
         (honorable mention) in the regional round of the New York State Business 
         Plan Competition against 30 other competitors. You can learn more about these 
-        endevors on the Projects page of this site.
+        endeavors on the Projects page of this site.
     </Typography>
   </>
 )
