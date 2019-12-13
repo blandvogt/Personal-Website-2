@@ -10,6 +10,7 @@ import material from '../images/material.webp';
 import black from '../images/black.webp';
 import chart from '../images/chart1.jpg';
 import react from '../images/react.png';
+import host from '../images/super.jpg';
 
 const Website = () => {
   const items = [{
@@ -55,6 +56,13 @@ const Website = () => {
           While the data needed for this site isn't all that complex, React Charts allows me to easily 
           create beautifully designed charts that both look and feel dynamic.`,
     link: 'https://github.com/jerairrest/react-chartjs-2'
+  }, {
+    image: host,
+    title: 'Hosting Hero',
+    body: `This site uses Netlify for continuous deployment. Once all of my code 
+          has been written, I deploy it to GitHub. Then, Netlify automatically grabs that content, compiles it into 
+          static files, and pushes it to the server. Netlify is perfect for JAM stack applications and even provides HTTPS.`,
+    link: 'https://www.netlify.com/'
   }]
 
   return (

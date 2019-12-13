@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
-import { Grid, Typography, CardContent, Card, CardMedia, makeStyles, Link, Paper } from '@material-ui/core';
+import { Grid, Typography, CardContent, Card, CardMedia, Link, Paper } from '@material-ui/core';
 import { GlobalState } from "../Context/GlobalContext";
 
 const CardGrid = props => {
-    const { linkText, infoTextDark, infoText } = useStyles();
     const darkMode = useContext(GlobalState).darkMode;
 
     const cards = props.items.map((item, i) => (
@@ -13,7 +12,7 @@ const CardGrid = props => {
                 <CardContent>
                     <Typography variant={'body1'} gutterBottom><strong>{item.title}</strong></Typography>
                     <Typography variant={'body2'} > {item.body} </Typography>
-                    <Typography className={linkText} variant={'body2'} >
+                    <Typography style={{float: 'right', margin: '0.5rem'}} variant={'body2'} >
                         <Link href={item.link}>More</Link>
                     </Typography>
                 </CardContent>
@@ -24,7 +23,8 @@ const CardGrid = props => {
     return (
         <Grid container spacing={3}>
             <Grid item xs={12} sm={6} md={4}>
-                <Paper className={darkMode ? infoTextDark : infoText}>
+                <Paper style={darkMode ? {backgroundColor: '#2e2e2e', color: 'white', padding: '1.2rem'} : 
+                    {backgroundColor: '#ededed', color: 'black', padding: '1.2rem'}}>
                     <Typography variant={'body1'} gutterBottom><strong>Site Information</strong></Typography>
                     <Typography variant={'body2'} >  
                         I kept the descriptions of the following tools short to focus on 
@@ -45,22 +45,5 @@ const CardGrid = props => {
         </Grid>
     )
 }
-
-const useStyles = makeStyles(() => ({
-    linkText: {
-        float: 'right', 
-        margin: '0.5rem'
-    }, 
-    infoText: {
-        backgroundColor: '#ededed', 
-        color: 'black',
-        padding: '1.2rem'
-    },
-    infoTextDark: {
-        backgroundColor: '#2e2e2e', 
-        color: 'white', 
-        padding: '1.2rem'
-    }
-}));
 
 export default CardGrid;

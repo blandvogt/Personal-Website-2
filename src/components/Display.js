@@ -1,20 +1,18 @@
 import React, { useState, useContext } from "react";
-import { Grid, Paper, List, ListItem, Divider, Card, 
-    CardContent, Typography, makeStyles } from "@material-ui/core";
+import { Grid, Paper, List, ListItem, Divider, Card, CardContent, Typography } from "@material-ui/core";
 import { GlobalState } from "../Context/GlobalContext";
 
 const Display = props => {
     const [selected, setSelected] = useState(0);
     const [content, setContent] = useState(props.items[0].content);
     const darkMode = useContext(GlobalState).darkMode;
-    const { listItem, listItemSelected, listItemDark, listItemDarkSelected } = useStyles();
 
     const menuLabels = props.items.map((item, i) => (
         <div key={i}>
             <Divider style={darkMode ? {backgroundColor: 'black'} : {}}/>
             <ListItem 
-            className={darkMode ? (selected === i ? listItemDarkSelected : listItemDark) : 
-                (selected === i ? listItemSelected : listItem)} 
+            style={darkMode ? (selected === i ? {backgroundColor: '#677273', color: 'white'} : {backgroundColor: 'grey'}) : 
+                (selected === i ? {backgroundColor: '#AEBDBE', color: '#474747'} : {backgroundColor: 'white'})} 
                 button onClick={() => { setSelected(i); setContent(props.items[i].content)}}>
                 <Typography>{item.name}</Typography>
             </ListItem>
@@ -40,20 +38,5 @@ const Display = props => {
         </Grid>
     )
 }
-
-const useStyles = makeStyles(() => ({
-    listItem: {
-        backgroundColor: 'white'
-    },
-    listItemSelected: {
-        backgroundColor: '#AEBDBE', color: '#474747'
-    }, 
-    listItemDark: {
-        backgroundColor: 'grey'
-    },
-    listItemDarkSelected: {
-        backgroundColor: '#677273', color: 'white'
-    }
-}));
 
 export default Display;
