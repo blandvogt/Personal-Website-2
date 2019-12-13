@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { Grid, Card, Typography, Container, Paper } from '@material-ui/core';
+import { Grid, Card, Typography, Container, Paper, Link, Button } from '@material-ui/core';
 import './Experience.css';
 import { graphql } from "gatsby";
 import Img from 'gatsby-image';
 import { GlobalState } from "../Context/GlobalContext";
+import resume from '../images/Resume_BrianLandvogt.pdf';
 
 const Experience = ({ data }) => {
   const darkMode = useContext(GlobalState).darkMode;
@@ -14,7 +15,7 @@ const Experience = ({ data }) => {
         <Layout headerTitle='Experience'>
             <SEO title="Experience"/>
             <Container maxWidth='xl' style={{padding: '1.2rem 1rem'}}>
-                <Grid container spacing={3}>
+                <Grid container spacing={2}>
                     <Grid item md={4} xs={12}>
                         <Card className='cityImg'>
                             <Img style={{height: '100%'}} fluid={data.file.childImageSharp.fluid}/>
@@ -60,10 +61,11 @@ const Experience = ({ data }) => {
                                     </Typography></li>
                                 </ul>
                             </div>
+                        </Paper>
 
-                            <br/>
-
-                            <div className='expText' style={{borderTop: '1px grey solid', paddingTop: '1.2rem'}}>
+                        <Paper style={darkMode ? {padding: '1.8rem', backgroundColor: '#4d4d4d', 
+                            color: 'white', marginTop: '1rem'} : {padding: '1.8rem', marginTop: '1rem'}}>
+                            <div className='expText' >
                                 <Typography variant="h6"><strong>StoryCorps, Inc.</strong></Typography>
                                 <Typography variant="subtitle1">June 2016 - September 2017</Typography>
                                 <Typography variant="subtitle2">
@@ -85,6 +87,13 @@ const Experience = ({ data }) => {
                                 </ul>
                             </div>
                         </Paper>
+                        <Button variant='contained' style={{backgroundColor: '#576F84', display: 'block', 
+                            marginLeft: 'auto', marginRight: 'auto', marginTop: '1rem'}}>
+                            <Link style={{textDecoration: 'none', color: 'white', textTransform: 'capitalize'}} 
+                            href={resume}>
+                                View Full Resume
+                            </Link>
+                        </Button>
                     </Grid>
                 </Grid>
             </Container>

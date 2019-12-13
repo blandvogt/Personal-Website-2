@@ -107,7 +107,7 @@ export const query = graphql`
             }
         }
       }
-      react: file(relativePath: {eq: "react.png"}) {
+      react: file(relativePath: {eq: "reactLogo.png"}) {
         childImageSharp {
             fluid(maxWidth: 50000, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
