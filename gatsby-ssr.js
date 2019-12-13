@@ -6,8 +6,6 @@
 
 // You can delete this file if you're not using it
 
-//const React = require("react");
-//const GlobalContext = require("./src/Context/GlobalContext");
 import React from 'react';
 import GlobalContext from './src/Context/GlobalContext';
 

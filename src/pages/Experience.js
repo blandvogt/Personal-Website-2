@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { Grid, Card, Typography, Container, Paper, makeStyles } from '@material-ui/core';
+import { Grid, Card, Typography, Container, Paper } from '@material-ui/core';
 import './Experience.css';
 import { graphql } from "gatsby";
 import Img from 'gatsby-image';
@@ -9,7 +9,6 @@ import { GlobalState } from "../Context/GlobalContext";
 
 const Experience = ({ data }) => {
   const darkMode = useContext(GlobalState).darkMode;
-  const { paper } = useStyle();
 
     return (
         <Layout headerTitle='Experience'>
@@ -22,7 +21,8 @@ const Experience = ({ data }) => {
                         </Card>
                     </Grid>
                     <Grid item md={8} xs={12}>
-                        <Paper className={paper} style={darkMode ? {backgroundColor: '#4d4d4d', color: 'white'} : {}}>
+                        <Paper style={darkMode ? {padding: '1.8rem', backgroundColor: '#4d4d4d', color: 'white'} : 
+                            {padding: '1.8rem'}}>
                             <div className='expText'>
                                 <Typography variant="h6"><strong>OppenheimerFunds, Inc. (Invesco)</strong></Typography>
                                 <Typography variant="subtitle1">June 2018 - September 2019</Typography>
@@ -91,12 +91,6 @@ const Experience = ({ data }) => {
         </Layout>
     )
 }
-
-const useStyle = makeStyles(() => ({
-    paper: {
-      padding: '1.5rem 2.2rem'
-    }
-  }));
 
 export default Experience;
 export const query = graphql`

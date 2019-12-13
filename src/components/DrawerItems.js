@@ -1,22 +1,22 @@
 import React, { useContext } from 'react';
-import { makeStyles, ListItemText, ListItem, List, Typography } from '@material-ui/core';
+import { ListItemText, ListItem, List, Typography } from '@material-ui/core';
 import { Link } from "gatsby";
 import { GlobalState } from "../Context/GlobalContext";
 
 const DrawerItems = () => {
-    const { homeTitle, list } = useStyles();
     const darkMode = useContext(GlobalState).darkMode;
     const path = window.location.pathname;
 
     return (
         <>
             <Link to='/' className='link'>
-                <Typography style={darkMode ? {color: '#0e7d99'} : {}} className={homeTitle} variant="h5"> 
+                <Typography style={darkMode ? {color: '#0e7d99', textAlign: 'center', fontWeight: 'bold', margin: '15px'} : 
+                {textAlign: 'center', fontWeight: 'bold', margin: '15px'}} variant="h5"> 
                     Brian Landvogt 
                 </Typography>
             </Link>
             <hr style={{backgroundColor: 'black'}}/>
-            <List className={list}>
+            <List style={{width: 250}}>
                 <Link to='/About' className='link'>
                     <ListItem button selected={path === '/About'}>
                         <ListItemText style={darkMode ? {color: 'white'} : {}} primary='About'/>
@@ -47,16 +47,5 @@ const DrawerItems = () => {
         </>
     );
 }
-
-const useStyles = makeStyles(() => ({
-    list: {
-        width: 250,
-    },
-    homeTitle: {
-        textAlign: 'center',
-        fontWeight: 'bold',
-        margin: '15px'
-    }
-}));
 
 export default DrawerItems;

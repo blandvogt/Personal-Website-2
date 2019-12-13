@@ -7,27 +7,23 @@ import { GlobalState } from "../Context/GlobalContext";
 import Helmet from 'react-helmet';
 
 const Layout = ({ children, headerTitle }) => {
-  const { parentBG, bodyClass, bodyClassDark } = useStyles();
+  const { bodyClass, bodyClassDark } = useStyles();
   const darkMode = useContext(GlobalState).darkMode;
 
   return (
     <>
       <Helmet><body className={darkMode ? bodyClassDark : bodyClass }/></Helmet>
       <Header headerTitle={headerTitle}/>
-      <div className={parentBG} style={darkMode ? 
-        {backgroundColor: '#383838', color: 'white'} : {backgroundColor: '#f7f7f7'}}>
+      <div style={darkMode ? 
+        {backgroundColor: '#383838', color: 'white', height: '100%', margin: '0', backgroundSize: '100%'} : 
+        {backgroundColor: '#f7f7f7', height: '100%', margin: '0', backgroundSize: '100%'}}>
           <main>{children}</main>
       </div>
     </>
   )
 }
 
-const useStyles = makeStyles(theme => ({
-  parentBG: {
-    height: '100%', 
-    margin: '0',
-    backgroundSize: '100%'
-  }, 
+const useStyles = makeStyles(() => ({
   bodyClass: {
     margin: '0',
     height: '100%',
@@ -35,6 +31,7 @@ const useStyles = makeStyles(theme => ({
     mozOsxFontSmoothing: 'grayscale',
     backgroundColor: '#f7f7f7'
   },
+  
   bodyClassDark: {
     margin: '0',
     height: '100%',

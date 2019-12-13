@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { makeStyles, AppBar, Toolbar, Typography, Button, IconButton, SwipeableDrawer, Grid } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Button, IconButton, SwipeableDrawer, Grid } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import EmojiObjectsOutlinedIcon from '@material-ui/icons/EmojiObjectsOutlined';
 import PropTypes from "prop-types";
@@ -7,16 +7,14 @@ import DrawItems from './DrawerItems';
 import { GlobalState, GlobalDispatch } from '../Context/GlobalContext';
 import './header.css';
 
-
 const Header = props => {
   const [ drawer, setDrawer ] = useState(false);
-  const { menuButton, darkModeBtn } = useStyles();
   const darkMode = useContext(GlobalState).darkMode;
 
   return (
       <AppBar style={darkMode ? {backgroundColor: '#2f3d4a'} : {backgroundColor: '#576F84'}} position="static">
         <Toolbar>
-          <IconButton className={menuButton} color="inherit" onClick={() => setDrawer(!drawer)}>
+          <IconButton style={{marginRight: '1rem'}} color="inherit" onClick={() => setDrawer(!drawer)}>
             <MenuIcon/>
           </IconButton>
           <Typography variant="h6"> {props.headerTitle} </Typography>
@@ -26,8 +24,8 @@ const Header = props => {
           </SwipeableDrawer>
 
           <Grid container spacing={1}><Grid item xs={12}>
-            <Button className={darkModeBtn} onClick={useContext(GlobalDispatch)}
-              style={darkMode ? {color: 'white'} : {color: 'black'}}>
+            <Button style={darkMode ? {color: 'white', float: 'right'} : {color: 'black', float: 'right'}} 
+              onClick={useContext(GlobalDispatch)}>
                 <EmojiObjectsOutlinedIcon/> 
             </Button>
           </Grid></Grid>
@@ -35,18 +33,6 @@ const Header = props => {
       </AppBar>
   );
 };
-
-const useStyles = makeStyles(theme => ({
-  menuButton: {
-    marginRight: theme.spacing(2),
-  }, 
-  darkModeBtn: {
-    float: 'right'
-  },
-  drawerSty: {
-    backgroundColor: 'purple'
-  }
-}));
 
 Header.propTypes = {
   headerTitle: PropTypes.string,
