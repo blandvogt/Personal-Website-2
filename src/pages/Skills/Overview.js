@@ -29,8 +29,10 @@ const Overview = () => {
       <Container>
         <Typography>
           The above chart represents my core technical skill set. Though I am a 
-          Full-Stack 'MERN' developer, capable of working on any aspect of a project, 
-          there are certain areas that I excel in more so than others.
+          Full-Stack 'MERN' developer, I am capable of working on any aspect of a project
+          even outside of that range. For example, this site was built using the JAM-Stack 
+          (check out the Website Info page for more on this!). Given that, there are still 
+          certain areas that I excel in more so than in others.
         </Typography>
         <br/> 
         <Typography>
