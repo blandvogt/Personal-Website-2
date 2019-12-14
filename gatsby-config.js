@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Brian Landvogt`,
     description: `Brian Landvogt's website.`,
-    author: `Brian Landvogt`,
+    author: `Brian Landvogt`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,8 +19,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `BrianLandvogt.com`,
+        short_name: `BrianLandvogt.com`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#ffffff`,
@@ -28,6 +28,7 @@ module.exports = {
         icon: `src/images/meSuit.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-offline`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

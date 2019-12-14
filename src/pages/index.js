@@ -81,14 +81,14 @@ export const query = graphql`
     }
     oculus: file(relativePath: {eq: "backgrounds/oculus.jpg"}) {
       childImageSharp {
-        fluid(maxWidth: 4500, quality: 100) {
+        fluid(maxWidth: 4200, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
     mountain: file(relativePath: {eq: "backgrounds/mountain1.jpg"}) {
       childImageSharp {
-        fluid(maxWidth: 4500, quality: 100) {
+        fluid(maxWidth: 4200, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }

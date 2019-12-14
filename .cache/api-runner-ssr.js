@@ -6,7 +6,10 @@ var plugins = [{
       options: {"plugins":[]},
     },{
       plugin: require('/Users/brianlandvogt/Code/website/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#663399","theme_color":"#ffffff","display":"minimal-ui","icon":"src/images/meSuit.png"},
+      options: {"plugins":[],"name":"BrianLandvogt.com","short_name":"BrianLandvogt.com","start_url":"/","background_color":"#663399","theme_color":"#ffffff","display":"minimal-ui","icon":"src/images/meSuit.png"},
+    },{
+      plugin: require('/Users/brianlandvogt/Code/website/node_modules/gatsby-plugin-offline/gatsby-ssr'),
+      options: {"plugins":[]},
     },{
       plugin: require('/Users/brianlandvogt/Code/website/gatsby-ssr'),
       options: {"plugins":[]},
