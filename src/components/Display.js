@@ -8,25 +8,23 @@ const Display = props => {
     const darkMode = useContext(GlobalState).darkMode;
 
     const menuLabels = props.items.map((item, i) => (
-        <div key={i}>
-            <Divider style={darkMode ? {backgroundColor: 'black'} : {}}/>
-            <ListItem 
-            style={darkMode ? (selected === i ? {backgroundColor: '#677273', color: 'white'} : {backgroundColor: 'grey'}) : 
-                (selected === i ? {backgroundColor: '#AEBDBE', color: '#474747'} : {backgroundColor: 'white'})} 
-                button onClick={() => { setSelected(i); setContent(props.items[i].content)}}>
-                <Typography>{item.name}</Typography>
-            </ListItem>
-        </div>
+        <div key={i}><Typography>
+            <List style={{paddingTop: '0px', paddingBottom: '2px'}}>
+                <ListItem 
+                    style={darkMode ? (selected === i ? {backgroundColor: '#677273', color: 'white'} : 
+                    {backgroundColor: 'grey'}) : 
+                    (selected === i ? {backgroundColor: '#AEBDBE', color: '#474747'} : {backgroundColor: 'white'})} 
+                    button onClick={() => { setSelected(i); setContent(props.items[i].content)}}>
+                    {item.name}
+                </ListItem>
+            </List>
+        </Typography></div>
     ));
 
     return (
         <Grid container>
             <Grid item md={4} style={{padding: '0.8rem'}}>
-            <List style={{paddingTop: '0px'}}>
-                <Paper>
-                    {menuLabels}
-                </Paper>
-            </List>
+                {menuLabels}
             </Grid>
             <Grid item md={8} style={{padding: '0.8rem'}}>
                 <Card style={darkMode ? {backgroundColor: '#4d4d4d', color: 'white'} : {}}>

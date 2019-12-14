@@ -49,28 +49,28 @@ export const query = graphql`
     query {
       Binder: file(relativePath: {eq: "projects/Binder.png"}) {
           childImageSharp {
-              fluid(maxWidth: 50000, quality: 100) {
+              fluid(maxWidth: 500, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
           }
       }
       WiMove: file(relativePath: {eq: "projects/WiMove.png"}) {
         childImageSharp {
-            fluid(maxWidth: 50000, quality: 100) {
+            fluid(maxWidth: 500, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
         }
       }
       OldWebsite: file(relativePath: {eq: "projects/OldWebsite.png"}) {
         childImageSharp {
-            fluid(maxWidth: 50000, quality: 100) {
+            fluid(maxWidth: 500, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
         }
       }
       DataScienceTeam: file(relativePath: {eq: "projects/DataScienceTeam.png"}) {
         childImageSharp {
-            fluid(maxWidth: 50000, quality: 100) {
+            fluid(maxWidth: 500, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
         }

@@ -13,7 +13,7 @@ const CardGrid = props => {
                     <Typography variant={'body1'} gutterBottom><strong>{item.title}</strong></Typography>
                     <Typography variant={'body2'} > {item.body} </Typography>
                     <Typography style={{float: 'right', margin: '0.5rem'}} variant={'body2'} >
-                        <Link style={{color: '#40b5e3'}} href={item.link}>More</Link>
+                        <Link style={{color: '#297999'}} href={item.link}>Documentation</Link>
                     </Typography>
                 </CardContent>
             </Card>

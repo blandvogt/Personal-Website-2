@@ -59,21 +59,21 @@ export const query = graphql`
     query {
       meDeer: file(relativePath: {eq: "meDeer.jpg"}) {
         childImageSharp {
-            fluid(maxWidth: 50000, quality: 100) {
+            fluid(maxWidth: 850, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
             }
         }
       }
       books: file(relativePath: {eq: "books.jpg"}) {
         childImageSharp {
-            fluid(maxWidth: 50000, quality: 100) {
+            fluid(maxWidth: 725, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
             }
         }
       }
       meJapan1: file(relativePath: {eq: "meJapan1.jpg"}) {
         childImageSharp {
-            fluid(maxWidth: 50000, quality: 100) {
+            fluid(maxWidth: 725, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
             }
         }

@@ -74,49 +74,49 @@ export const query = graphql`
     query {
       gatsby: file(relativePath: {eq: "gatsby-icon.png"}) {
           childImageSharp {
-              fluid(maxWidth: 1000, quality: 100) {
+              fluid(maxWidth: 750, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
               }
           }
       }
       superImage: file(relativePath: {eq: "image.jpg"}) {
         childImageSharp {
-            fluid(maxWidth: 1000, quality: 100) {
+            fluid(maxWidth: 750, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
             }
         }
       }
       material: file(relativePath: {eq: "materialDesign.png"}) {
         childImageSharp {
-            fluid(maxWidth: 1000, quality: 100) {
+            fluid(maxWidth: 750, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
             }
         }
       }
       black: file(relativePath: {eq: "dark.jpeg"}) {
         childImageSharp {
-            fluid(maxWidth: 1000, quality: 100) {
+            fluid(maxWidth: 750, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
             }
         }
       }
       chart: file(relativePath: {eq: "chart1.jpg"}) {
         childImageSharp {
-            fluid(maxWidth: 1000, quality: 100) {
+            fluid(maxWidth: 750, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
             }
         }
       }
       react: file(relativePath: {eq: "reactLogo.png"}) {
         childImageSharp {
-            fluid(maxWidth: 1000, quality: 100) {
+            fluid(maxWidth: 750, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
             }
         }
       }
       host: file(relativePath: {eq: "super.jpg"}) {
         childImageSharp {
-            fluid(maxWidth: 1000, quality: 100) {
+            fluid(maxWidth: 750, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
             }
         }

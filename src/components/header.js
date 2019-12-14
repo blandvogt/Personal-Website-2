@@ -14,7 +14,7 @@ const Header = props => {
   return (
       <AppBar style={darkMode ? {backgroundColor: '#2f3d4a'} : {backgroundColor: '#576F84'}} position="static">
         <Toolbar>
-          <IconButton style={{marginRight: '1rem'}} color="inherit" onClick={() => setDrawer(!drawer)}>
+          <IconButton style={{marginRight: '1rem'}} color="inherit" aria-label="menu" onClick={() => setDrawer(!drawer)}>
             <MenuIcon/>
           </IconButton>
           <Typography variant="h6"> {props.headerTitle} </Typography>
@@ -24,7 +24,7 @@ const Header = props => {
           </SwipeableDrawer>
 
           <Grid container spacing={1}><Grid item xs={12}>
-            <Button style={darkMode ? {color: 'white', float: 'right'} : {color: 'black', float: 'right'}} 
+            <Button aria-label="Dark Mode" style={darkMode ? {color: 'white', float: 'right'} : {color: 'black', float: 'right'}} 
               onClick={useContext(GlobalDispatch)}>
                 <EmojiObjectsOutlinedIcon/> 
             </Button>

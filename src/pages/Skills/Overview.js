@@ -38,7 +38,7 @@ const Overview = () => {
         <Typography>
           As you'll notice, my strongest skill is in front-end development. I am particularly 
           fond of the React.js library as you'll come to see. I have also been told that 
-          I inhibit a stronger nack for UI/UX design than the average developer. In previous 
+          I inhibit a stronger knack for UI/UX design than the average developer. In previous 
           positions, I was often given extended design freedoms.
         </Typography>
       </Container>

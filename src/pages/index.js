@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => {
         <div style={darkMode ? { height: '100%', backgroundColor: '#1f1e1e', color: 'white' } : {}}><DrawItems /></div>
       </SwipeableDrawer>
 
-      <Button onClick={useContext(GlobalDispatch)}
+      <Button aria-label="Dark Mode" onClick={useContext(GlobalDispatch)}
         style={darkMode ? {color: 'white', float: 'right', marginTop: '1.5rem', marginRight: '1rem'} : 
         {color: 'black', float: 'right', marginTop: '1.5rem', marginRight: '1rem'}}>
         <EmojiObjectsOutlinedIcon />
@@ -74,21 +74,21 @@ export const query = graphql`
   query {
     Brian: file(relativePath: {eq: "brian.jpg"}) {
       childImageSharp {
-        fluid(maxWidth: 700) {
+        fluid(maxWidth: 200, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
     oculus: file(relativePath: {eq: "backgrounds/oculus.jpg"}) {
       childImageSharp {
-        fluid(maxWidth: 50000, quality: 100) {
+        fluid(maxWidth: 4500, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
     mountain: file(relativePath: {eq: "backgrounds/mountain1.jpg"}) {
       childImageSharp {
-        fluid(maxWidth: 50000, quality: 100) {
+        fluid(maxWidth: 4500, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
