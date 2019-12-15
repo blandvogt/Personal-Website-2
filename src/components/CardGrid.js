@@ -20,30 +20,7 @@ const CardGrid = props => {
         </Grid>
     ));
 
-    return (
-        <Grid container spacing={3}>
-            <Grid item xs={12} sm={6} md={4}>
-                <Paper style={darkMode ? {backgroundColor: '#2e2e2e', color: 'white', padding: '1.2rem'} : 
-                    {backgroundColor: '#ededed', color: 'black', padding: '1.2rem'}}>
-                    <Typography variant={'body1'} gutterBottom><strong>Site Information</strong></Typography>
-                    <Typography variant={'body2'} >  
-                        I kept the descriptions of the following tools short to focus on 
-                        their implementation. If you're interested in 
-                        learning how to use them, the "More" button links to documentation.
-                    </Typography>
-                    <br/>
-                    <Typography variant={'body2'} >  
-                        Going back to early wireframming, I knew this page was essential. 
-                        Firstly, I wanted to show my ability to produce a cohesive 
-                        product to any potential future employeers. Perhaps more importantly though, 
-                        I also wanted to teach new engineers, or even just the curious, how to 
-                        build similar experiences.
-                    </Typography>
-                </Paper>
-            </Grid>
-            {cards}
-        </Grid>
-    )
+    return <Grid container spacing={3}> {cards} </Grid>
 }
 
 export default CardGrid;

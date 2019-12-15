@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { Container } from '@material-ui/core';
+import { Container, Typography, Paper, Grid, Link } from '@material-ui/core';
 import CardGrid from "../components/CardGrid";
+import { GlobalState } from "../Context/GlobalContext";
+import Img from 'gatsby-image';
 
 
 
 const Website = ({ data }) => {
+  const darkMode = useContext(GlobalState).darkMode;
   const items = [{
     image: data.react.childImageSharp.fluid,
     title: 'Positive Reaction',
@@ -63,6 +66,41 @@ const Website = ({ data }) => {
     <Layout headerTitle='Website'>
       <SEO title="Site Info" />
       <Container maxWidth={'xl'} style={{ padding: '1.2rem 1rem' }}>
+            <Paper style={darkMode ? {backgroundColor: '#2e2e2e', color: 'white', padding: '1.2rem', marginBottom: '2rem'} :
+                {backgroundColor: 'white', color: 'black', padding: '1.2rem', marginBottom: '2rem'}}>
+                <Grid container spacing={4}>
+                  <Grid item xs={12} md={10}>
+                    <Typography variant={'body2'} >  
+                      As of 2019, this website uses some of the latest and most advanced technology in web development. 
+                      Ok, that might be a bit of hyperbole and is certainly a statement difficult to backup even 
+                      a couple months from now. Still, I'm very proud of what BrianLandvogt.com 
+                      is capable of. Whether you're interested in creating a similar web experience, or if you're just curious,
+                      this page is meant to give insight into exactly what powers BrinaLandvogt.com.
+                    </Typography>
+                    <br/>
+                    <Typography variant={'body2'}>  
+                      As per the accompanying image, Google's Lighthouse tool gives this site perfect scores across the 
+                      board when under the ideal conditions. More so, BrianLandvogt.com has earned a coveted Google 
+                      Progressive Web Application (PWA) certification. As per Google's <span> </span>
+                      <Link style={{color: '#297999'}} href={'https://developers.google.com/web/progressive-web-apps'}>
+                        offical definition</Link>
+                      , a PWA must be "Reliable", "Fast", and "Engaging" to the highest technical standards. 
+                      They represent "user experiences that have the reach of the web". In fact, you can even download 
+                      BrianLandvogt.com and use it as a native app on your homescreen.
+                    </Typography>
+                    <br/>
+                    <Typography variant={'body2'}>  
+                      The technologies below are each used on this site to varying degrees. Attached is a brief 
+                      description of how they are implemented. If you would like to learn more, the attached 
+                      link on each card will bring you to their official documentation.
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={12} md={2}>
+                    <Img fluid={data.lighthouse.childImageSharp.fluid} style={{borderRadius: '5px',
+                      padding: '0px'}}/>
+                  </Grid>
+                </Grid>
+            </Paper>
         <CardGrid items={items}/>
       </Container>
     </Layout>
@@ -72,6 +110,13 @@ const Website = ({ data }) => {
 export default Website;
 export const query = graphql`
     query {
+      lighthouse: file(relativePath: {eq: "lighthouse4.png"}) {
+        childImageSharp {
+            fluid(maxWidth: 800, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
+            }
+        }
+      }
       gatsby: file(relativePath: {eq: "gatsby-icon.png"}) {
           childImageSharp {
               fluid(maxWidth: 750, quality: 100) {

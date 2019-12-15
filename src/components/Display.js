@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { Grid, Paper, List, ListItem, Divider, Card, CardContent, Typography } from "@material-ui/core";
+import { Grid, List, ListItem, Card, CardContent, Typography } from "@material-ui/core";
 import { GlobalState } from "../Context/GlobalContext";
 
 const Display = props => {
