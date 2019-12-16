@@ -1,8 +1,20 @@
 ---
 path: '/post-Modern-Agile'
 date: '2019-12-14'
-title: 'Modern Agile'
 author: 'Brian Landvogt'
+title: 'Modern Agile'
+summary: 'My experiences and perspectives on Agile Software Development.'
 ---
 
-This is where I write about **Agile**...
+We all need Agile, we all want Agile. If you aren't Agile, you aren't effective.
+You can ask 100 teams what Agile means and you'll get 99 staunchly defended definitions. That remaining 1 team 
+is the one that admits they have no idea what they're doing. I certainly don't claim to have the answer to what form of 
+Agile is best. I do however, have experience on one of those 1 in a 100 teams. A team that admitted its 
+system was broken and was willing to (and had the opportunity to) experiment with solutions. In this blog 
+post you'll learn about what we learned, only much quicker and alot less painfully.
+
+I hinted earlier that the ability to experiment with new ideas and processes isn't always a given. 
+Particularly at older companies, processes can become so engrained into daily operations, that 
+any alteration would take a department-wide effort. Companies  also
+have varying degrees of what can be altered. For instance, my team was able to shorten 
+code releases to our Staging environment, but couldn't affect the release schedule to Production.
