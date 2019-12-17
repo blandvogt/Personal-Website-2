@@ -6,9 +6,9 @@ import { GlobalState } from '../../Context/GlobalContext';
 const ReactTools = () => {
   const darkMode = useContext(GlobalState).darkMode;
   const data = {
-    labels: ['Redux', 'Material UI', 'Router', 'Jest', 'Gatsby', 'Dev Tools'],
+    labels: ['Redux', 'Material UI', 'Router', 'Jest', 'Gatsby', 'Context'],
     datasets: [{
-      data: ['7', '9', '6', '5', '8', '9'],
+      data: ['7', '9', '6', '6', '9', '9'],
       backgroundColor: ['#1F4D5A', '#075568', '#6FBFC0', '#F1FAF3', '#E8CBA8', '#ECE9DF']
     }]
   }

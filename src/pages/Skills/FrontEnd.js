@@ -7,9 +7,9 @@ const FrontEnd = () => {
   const darkMode = useContext(GlobalState).darkMode;
   const data = {
     labels: ['JavaScript', 'HTML', 'CSS', 'jQuery', 'Bootstrap',
-      'Ajax', 'React.js'],
+      'Fetch', 'React.js'],
     datasets: [{
-      data: ['8', '9', '7', '5', '6', '4', '9'],
+      data: ['8', '9', '8', '6', '6', '7', '9'],
       backgroundColor: ['#075568', '#6FBFC0', '#F1FAF3', '#E8CBA8', '#ECE9DF', '#ecdfec', '#dfdfec']
     }]
   }

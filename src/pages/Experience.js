@@ -9,8 +9,7 @@ import { GlobalState } from "../Context/GlobalContext";
 import resume from '../images/Resume_BrianLandvogt.pdf';
 
 const Experience = ({ data }) => {
-  const darkMode = useContext(GlobalState).darkMode;
-
+    const darkMode = useContext(GlobalState).darkMode;
     return (
         <Layout headerTitle='Experience'>
             <SEO title="Experience"/>
@@ -27,37 +26,41 @@ const Experience = ({ data }) => {
                             <div className='expText'>
                                 <Typography variant="h6"><strong>OppenheimerFunds, Inc. (Invesco)</strong></Typography>
                                 <Typography variant="subtitle1">June 2018 - September 2019</Typography>
-                                <Typography variant="subtitle2">
-                                    Developed custom Salesforce CRM components and led an overhaul of DevOps processes to 
-                                    tighten feedback loops and deliver value twice as fast.
-                                </Typography>
+                                <Typography variant="subtitle2"><i>
+                                    Developed CRM software to support sales distribution teams: JavaScript, 
+                                    HTML/CSS, Salesforce, SOQL
+                                </i></Typography>
                                 <br/>
-
                                 <ul>
                                     <li><Typography variant="body2">
-                                        Increased sales effectiveness by designing the UI/UX for a lead-scoring system that dynamically 
-                                        rates the probability of client conversion and the optimal tactics to complete sales funnels. 
+                                        Designed and developed the UI for a Lead Score sales component, that 
+                                        took in pre-processed client data and outputted recommendations for 
+                                        moving the lead through the conversion pipeline.
                                     </Typography></li>
                                     <li><Typography variant="body2">
-                                        Decreased development lead time by 50% (from 2 weeks, to 1 week) by focusing on smaller 
-                                        iterations to deliver faster value to users, quicker feedback, and reduce contention of resources.
+                                        Developed Actionable Leads page that queried for all clients in a 
+                                        given financial advisor’s region, displayed their various client 
+                                        data, and presented the tools to carry out next steps.
                                     </Typography></li>
                                     <li><Typography variant="body2">
-                                        Successfully merged CRM systems by cleaning/importing over 3 million records with a 98% success 
-                                        rate and refactoring thousands of legacy code lines to support ES6 and current code standards.
+                                        Cleaned and imported over 3 million records with a 98% success rate 
+                                        into the OppenheimerFunds’ CRM as part of the Invesco acquisition and 
+                                        subsequent decommissioning of Invesco’s older CRM.
                                     </Typography></li>
                                     <li><Typography variant="body2">
-                                        Boosted user efficiency by implementing a client scheduling tool, allowing top financial 
-                                        advisors to directly view the itinerary of a desired consultant and book a meeting time.
+                                        Led an overhaul of the team’s DevOps process, by teaching consultant 
+                                        teams a new continuous deployment tool and focusing on smaller iterations 
+                                        to deliver faster code and shorten feedback loops.
                                     </Typography></li>
                                     <li><Typography variant="body2">
-                                        Spearheaded redesign of entire SalesForce CRM system to utilize modern, reactive design 
-                                        principles, using test-driven development and component-driven architecture.
+                                        Configured and trained users in a CRM-integrated outreach tool, that 
+                                        allowed clients to create meetings on an advisor’s calendar and 
+                                        automatically fetch that client’s data to attach to the meeting.
                                     </Typography></li>
                                     <li><Typography variant="body2">
-                                        Defined a leadership role by heading daily stand-ups, conducting technical interviews 
-                                        for new hires, speaking at Toastmasters International, presenting to interns, 
-                                        and administering user training.
+                                        Held a leadership role by heading daily Agile standups, creating 
+                                        presentations for interns, participating in ToastMasters International, 
+                                        and conducting technical interviews for new-hires.
                                     </Typography></li>
                                 </ul>
                             </div>
@@ -65,24 +68,26 @@ const Experience = ({ data }) => {
 
                         <Paper style={darkMode ? {padding: '1.8rem', backgroundColor: '#4d4d4d', 
                             color: 'white', marginTop: '1rem'} : {padding: '1.8rem', marginTop: '1rem'}}>
-                            <div className='expText' >
+                            <div className='expText'>
                                 <Typography variant="h6"><strong>StoryCorps, Inc.</strong></Typography>
                                 <Typography variant="subtitle1">June 2016 - September 2017</Typography>
-                                <Typography variant="subtitle2">
-                                    Developed front and back-end code for multiple award-winning, web-based projects. 
-                                    Led weekly scrum meetings and provided input to key UX decisions.  
-                                </Typography>
-
+                                <Typography variant="subtitle2"><i>
+                                    Front-End development for multiple web-based projects: JavaScript, 
+                                    HTML/CSS, WordPress  
+                                </i></Typography>
                                 <br/>
                                 <ul>
                                     <li><Typography variant="body2">
-                                        Engineered the UI/UX for a re-designed Webby Award honored website (storycorps.org). 
+                                        Engineered the UI/UX for a re-designed Webby Award honored 
+                                        website (storycorps.org). 
                                     </Typography></li>
                                     <li><Typography variant="body2">
-                                        Designed and launched a social media platform (archive.storycorps.org) with over 172,000 posts.
+                                        Designed and launched a social media platform (archive.storycorps.org) 
+                                        with over 172,000 posts.
                                     </Typography></li>
                                     <li><Typography variant="body2">
-                                        Constructed bug reports for a TED Prize winning, Webby Award nominated mobile application.
+                                        Constructed bug reports for a TED Prize winning, Webby Award nominated 
+                                        mobile application.
                                     </Typography></li>
                                 </ul>
                             </div>
@@ -90,9 +95,7 @@ const Experience = ({ data }) => {
                         <Button variant='contained' style={{backgroundColor: '#576F84', display: 'block', 
                             marginLeft: 'auto', marginRight: 'auto', marginTop: '1rem'}}>
                             <Link style={{textDecoration: 'none', color: 'white', textTransform: 'capitalize'}} 
-                            href={resume}>
-                                View Full Resume
-                            </Link>
+                            href={resume}>View Full Resume</Link>
                         </Button>
                     </Grid>
                 </Grid>

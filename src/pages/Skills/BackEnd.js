@@ -9,7 +9,7 @@ const BackEnd = () => {
     labels: ['Node.js', 'Express.js', 'Java', 'GraphQL', 'REST',
       'MySQL', 'Python', 'MongoDB'],
     datasets: [{
-      data: ['9', '6', '7', '6', '6', '7', '4', '5'],
+      data: ['9', '7', '6', '8', '7', '7', '4', '6'],
       backgroundColor: ['#ebc2f4', '#C2F4E2', '#d2c2f4', '#f4d8c2', '#c2d4f4', '#c9f4c2', '#f4e3c2', '#f4cbc2']
     }]
   }

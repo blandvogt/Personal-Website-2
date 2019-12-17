@@ -65,7 +65,7 @@ const Website = ({ data }) => {
     name: 'Hosting Hero',
     content: `This site uses Netlify for continuous deployment. Once all of my code 
           has been written, I deploy it to GitHub. Then, Netlify automatically grabs that content, compiles it into 
-          static files, and pushes it to the server. Netlify is perfect for JAM stack applications and even provides HTTPS.`,
+          static files, and pushes it to the server. Netlify is perfect for JAM-Stack applications and even provides HTTPS.`,
     link: 'https://www.netlify.com/',
     linkTitle: 'Documentaion'
   }]
@@ -119,49 +119,49 @@ export const query = graphql`
       }
       gatsby: file(relativePath: {eq: "gatsby-icon.png"}) {
           childImageSharp {
-              fluid(maxWidth: 500, quality: 100) {
+              fluid(maxWidth: 450, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
               }
           }
       }
       superImage: file(relativePath: {eq: "image.jpg"}) {
         childImageSharp {
-            fluid(maxWidth: 500, quality: 100) {
+            fluid(maxWidth: 450, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
             }
         }
       }
       material: file(relativePath: {eq: "materialDesign.png"}) {
         childImageSharp {
-            fluid(maxWidth: 500, quality: 100) {
+            fluid(maxWidth: 450, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
             }
         }
       }
       black: file(relativePath: {eq: "dark.jpeg"}) {
         childImageSharp {
-            fluid(maxWidth: 500, quality: 100) {
+            fluid(maxWidth: 450, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
             }
         }
       }
       chart: file(relativePath: {eq: "chart1.jpg"}) {
         childImageSharp {
-            fluid(maxWidth: 500, quality: 100) {
+            fluid(maxWidth: 450, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
             }
         }
       }
       react: file(relativePath: {eq: "reactLogo.png"}) {
         childImageSharp {
-            fluid(maxWidth: 500, quality: 100) {
+            fluid(maxWidth: 450, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
             }
         }
       }
       host: file(relativePath: {eq: "super.jpg"}) {
         childImageSharp {
-            fluid(maxWidth: 500, quality: 100) {
+            fluid(maxWidth: 450, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
             }
         }
