@@ -6,10 +6,13 @@ var plugins = [{
       options: {"plugins":[]},
     },{
       plugin: require('/Users/brianlandvogt/Code/website/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"BrianLandvogt.com","short_name":"Brian Landvogt","start_url":"/","background_color":"#663399","theme_color":"#ffffff","display":"minimal-ui","icon":"src/images/meSuit.png"},
+      options: {"plugins":[],"name":"BrianLandvogt.com","short_name":"Brian Landvogt","start_url":"/","background_color":"#FFFFFF","theme_color":"#FFFFFF","display":"minimal-ui","icon":"src/images/meSuit.png"},
     },{
       plugin: require('/Users/brianlandvogt/Code/website/node_modules/gatsby-plugin-offline/gatsby-ssr'),
       options: {"plugins":[]},
+    },{
+      plugin: require('/Users/brianlandvogt/Code/website/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
+      options: {"plugins":[],"trackingId":"UA-154889234-1","head":true,"anonymize":true,"respectDNT":true,"exclude":[],"pageTransitionDelay":0},
     },{
       plugin: require('/Users/brianlandvogt/Code/website/gatsby-ssr'),
       options: {"plugins":[]},

@@ -27,20 +27,25 @@ const Experience = ({ data }) => {
                                 <Typography variant="h6"><strong>OppenheimerFunds, Inc. (Invesco)</strong></Typography>
                                 <Typography variant="subtitle1">June 2018 - September 2019</Typography>
                                 <Typography variant="subtitle2"><i>
-                                    Developed CRM software to support sales distribution teams: JavaScript, 
-                                    HTML/CSS, Salesforce, SOQL
+                                Full-Stack Agile Development, supporting Sales-Distribution CRM: 
+                                JavaScript, HTML/CSS, Salesforce Apex
                                 </i></Typography>
                                 <br/>
                                 <ul>
                                     <li><Typography variant="body2">
-                                        Designed and developed the UI for a Lead Score sales component, that 
-                                        took in pre-processed client data and outputted recommendations for 
-                                        moving the lead through the conversion pipeline.
+                                        Designed and developed dozens of components, such as a Lead Score 
+                                        component that takes in pre-processed data and outputs the optimal 
+                                        methods for converting a lead through the sales pipeline.
                                     </Typography></li>
                                     <li><Typography variant="body2">
-                                        Developed Actionable Leads page that queried for all clients in a 
-                                        given financial advisor’s region, displayed their various client 
-                                        data, and presented the tools to carry out next steps.
+                                        Developed and unit tested an Actionable Leads page that queries and 
+                                        displays client data for a given Financial Advisor’s region, as well as 
+                                        the tools to manipulate that data and carry out next steps.
+                                    </Typography></li>
+                                    <li><Typography variant="body2">
+                                        Led an overhaul of the team’s DevOps process by teaching consultants 
+                                        new continuous deployment tools, and by focusing on smaller iterations 
+                                        to deliver code faster and shorten feedback loops.
                                     </Typography></li>
                                     <li><Typography variant="body2">
                                         Cleaned and imported over 3 million records with a 98% success rate 
@@ -48,19 +53,14 @@ const Experience = ({ data }) => {
                                         subsequent decommissioning of Invesco’s older CRM.
                                     </Typography></li>
                                     <li><Typography variant="body2">
-                                        Led an overhaul of the team’s DevOps process, by teaching consultant 
-                                        teams a new continuous deployment tool and focusing on smaller iterations 
-                                        to deliver faster code and shorten feedback loops.
+                                        Configured and trained users in several API plugins, such as ForgeRock 
+                                        SSO and an integrated outreach tool that automatically fetches data when 
+                                        a client creates meetings on an advisor’s calendar.
                                     </Typography></li>
                                     <li><Typography variant="body2">
-                                        Configured and trained users in a CRM-integrated outreach tool, that 
-                                        allowed clients to create meetings on an advisor’s calendar and 
-                                        automatically fetch that client’s data to attach to the meeting.
-                                    </Typography></li>
-                                    <li><Typography variant="body2">
-                                        Held a leadership role by heading daily Agile standups, creating 
-                                        presentations for interns, participating in ToastMasters International, 
-                                        and conducting technical interviews for new-hires.
+                                        Held a leadership role by heading daily Agile standups, creating presentations 
+                                        for interns, speaking at Toastmasters International, and leading interviews 
+                                        for new-hires and for user-design (UCD) sessions.
                                     </Typography></li>
                                 </ul>
                             </div>
@@ -72,13 +72,13 @@ const Experience = ({ data }) => {
                                 <Typography variant="h6"><strong>StoryCorps, Inc.</strong></Typography>
                                 <Typography variant="subtitle1">June 2016 - September 2017</Typography>
                                 <Typography variant="subtitle2"><i>
-                                    Front-End development for multiple web-based projects: JavaScript, 
-                                    HTML/CSS, WordPress  
+                                    Front-End Agile Development, for multiple web-based projects: 
+                                    JavaScript, HTML/CSS, WordPress
                                 </i></Typography>
                                 <br/>
                                 <ul>
                                     <li><Typography variant="body2">
-                                        Engineered the UI/UX for a re-designed Webby Award honored 
+                                        Developed the UI/UX for a re-designed Webby Award honored 
                                         website (storycorps.org). 
                                     </Typography></li>
                                     <li><Typography variant="body2">
